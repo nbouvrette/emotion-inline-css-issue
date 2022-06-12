@@ -1,5 +1,23 @@
-import { basicStyles } from '../shared/styles';
+import {
+  basicStyles,
+  otherStyles,
+  someMoreBasicStyles,
+  someCssAsObject,
+  combinedAsArray,
+  cxExample,
+  keyframesExample,
+} from '../shared/styles';
 
 export default function Footer() {
-  return <footer className={basicStyles}>Footer using basic style</footer>;
+  return (
+    <footer>
+      <div className={basicStyles}>basicStyles</div>
+      <div className={otherStyles}>otherStyles</div>
+      <div className={someMoreBasicStyles}>someMoreBasicStyles</div>
+      <div className={someCssAsObject}>someCssAsObject</div>
+      <div className={combinedAsArray}>combinedAsArray</div>
+      <div className={cxExample}>cxExample</div>
+      <div className={keyframesExample}>keyframesExample</div>
+    </footer>
+  );
 }
