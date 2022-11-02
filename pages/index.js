@@ -1,39 +1,11 @@
-import Head from 'next/head';
-import {
-  basicStyles,
-  otherStyles,
-  someMoreBasicStyles,
-  someCssAsObject,
-  combinedAsArray,
-  cxExample,
-  keyframesExample,
-} from '../shared/styles';
-
-import Footer from '../components/Footer';
+import CssComponent from "../components/CssComponent";
+import StyledComponent from "../components/StyledComponent";
 
 const Home = () => (
   <>
-    <Head>
-      <title>Emotion using the vanilla version supporting SSR</title>
-    </Head>
-    <div>
-      <h1>Emotion Vanilla example</h1>
-      <div className={basicStyles}>Basic styles using emotion</div>
-      <div className={otherStyles}>Some more styles using emotion</div>
-      <div className={someMoreBasicStyles}>Well why not here is some more</div>
-      <div className={someCssAsObject}>Object styles using emotion css</div>
-      <div className={combinedAsArray}>Array of styles using emotion css</div>
-      <div className={cxExample}>cx example from emotion</div>
-      <div className={keyframesExample} />
-    </div>
-    <Footer></Footer>
+    <CssComponent></CssComponent>
+    <StyledComponent></StyledComponent>
   </>
 );
-
-export async function getServerSideProps(context) {
-  return {
-    props: {}, // will be passed to the page component as props
-  };
-}
 
 export default Home;
